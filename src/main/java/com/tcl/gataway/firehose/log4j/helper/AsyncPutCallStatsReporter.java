@@ -20,8 +20,6 @@ import org.joda.time.Period;
 import org.joda.time.format.PeriodFormat;
 
 import com.amazonaws.handlers.AsyncHandler;
-import com.amazonaws.services.kinesis.model.PutRecordRequest;
-import com.amazonaws.services.kinesis.model.PutRecordResult;
 import com.amazonaws.services.kinesisfirehose.model.PutRecordBatchRequest;
 import com.amazonaws.services.kinesisfirehose.model.PutRecordBatchResult;
 

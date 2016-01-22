@@ -50,6 +50,7 @@ public class FlumeTcpAppender extends AppenderSkeleton{
 		
 		
 		String message  = layout.format(event);
+		System.out.println(message);
 		try {
 			tcpClient.append(message);
 		} catch (IOException e) {

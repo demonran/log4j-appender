@@ -45,13 +45,8 @@ import com.tcl.gataway.firehose.log4j.helper.BlockFastProducerPolicy;
 import com.tcl.gataway.firehose.log4j.helper.CustomCredentialsProviderChain;
 import com.tcl.gataway.firehose.log4j.helper.Validator;
 
-/**
- * Log4J Appender implementation to support sending data from java applications
- * directly into a Kinesis stream.
- * 
- * More details are available <a
- * href="https://github.com/awslabs/kinesis-log4j-appender">here</a>
- */
+
+
 public class FirehoseAppender extends AppenderSkeleton {
   private static final Logger LOGGER = Logger.getLogger(FirehoseAppender.class);
   private String encoding = AppenderConstants.DEFAULT_ENCODING;
@@ -155,7 +150,7 @@ public class FirehoseAppender extends AppenderSkeleton {
         PredefinedRetryPolicies.DEFAULT_BACKOFF_STRATEGY, maxRetries, true));
     clientConfiguration.setUserAgent(AppenderConstants.USER_AGENT_STRING);
 
-    BlockingQueue<Runnable> taskBuffer = new LinkedBlockingDeque<Runnable>(bufferSize);
+    final BlockingQueue<Runnable> taskBuffer = new LinkedBlockingDeque<Runnable>(bufferSize);
     ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(threadCount, threadCount,
         AppenderConstants.DEFAULT_THREAD_KEEP_ALIVE_SEC, TimeUnit.SECONDS, taskBuffer, new BlockFastProducerPolicy());
     threadPoolExecutor.prestartAllCoreThreads();
