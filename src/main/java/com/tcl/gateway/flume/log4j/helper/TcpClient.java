@@ -1,4 +1,4 @@
-package com.tcl.gataway.flume.log4j.helper;
+package com.tcl.gateway.flume.log4j.helper;
 
 import java.io.IOException;
 import java.io.PrintWriter;

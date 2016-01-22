@@ -1,4 +1,4 @@
-package com.tcl.gataway.flume.log4j;
+package com.tcl.gateway.flume.log4j;
 
 import java.io.IOException;
 
@@ -6,7 +6,7 @@ import org.apache.log4j.AppenderSkeleton;
 import org.apache.log4j.helpers.LogLog;
 import org.apache.log4j.spi.LoggingEvent;
 
-import com.tcl.gataway.flume.log4j.helper.TcpClient;
+import com.tcl.gateway.flume.log4j.helper.TcpClient;
 
 public class FlumeTcpAppender extends AppenderSkeleton{
 	

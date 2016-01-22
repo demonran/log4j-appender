@@ -15,3 +15,4 @@
 
 
 #### Firehose log4j apppender
+ - [x] 改进 LaTex 功能

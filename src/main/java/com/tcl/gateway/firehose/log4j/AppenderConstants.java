@@ -12,7 +12,7 @@
  * express or implied. See the License for the specific language governing
  * permissions and limitations under the License.
  ******************************************************************************/
-package com.tcl.gataway.firehose.log4j;
+package com.tcl.gateway.firehose.log4j;
 
 import com.amazonaws.regions.Regions;
 
